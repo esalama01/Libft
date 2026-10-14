@@ -6,13 +6,13 @@
 /*   By: elsalama <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 13:15:58 by elsalama          #+#    #+#             */
-/*   Updated: 2026/10/13 17:19:40 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/10/14 10:28:15 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void *memcpy(void *dest, const void *src, size_t n)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t i;
 
