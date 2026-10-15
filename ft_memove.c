@@ -6,11 +6,11 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 20:53:25 by elsalama          #+#    #+#             */
-/*   Updated: 2026/10/14 21:39:13 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/10/15 18:10:09 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include <stdint.h>
 #include <stddef.h>
 
 int ft_strlen(char *s)
@@ -23,16 +23,31 @@ int ft_strlen(char *s)
     return (l);
 }
 
+int ft_min(int a, int b)
+{
+    if (a < b)
+        return (a);
+    return (b);
+}
+
 void *ft_memmove(void *dest, const void *src, size_t n)//i will use either forward or backward copy based on the case.
 {
     /*
-    I must handle so many cases:
-        1- if &src[0] < &dest[0] i will use forward cpy. But take care of the case if the diff between them is less than len(src).
-        2- if $src[0] > &dest[0] i will use backward cpu. But take care of the case where the diff between them is less than len(src).
-        3- If they're equal. i think i can t write data to it in that case. 
+    I must handle two cases:
+        1- [&src[0] > dest[0]] && [&dest[0] + min(n, len(src)) > &src[0]]
+        2- &src[0] <= &dest[0] <= src[len(src) - 1]
+    */
+    /*
+    for :
+        case 1- backward &dest[0] by a quantity of [&dest[0] + min(n, len(src)) -src[0] + 1])
+        case 2- forward (&dest[0]  by a quatity of [src[len(src) - 1] + 1]) 
     */
     int length;
 
     length = ft_strlen(src);
-
+    ///case 1
+    if (((uintptr_t)&src[0] > (uintptr_t)&dest[0]) && ((uintptr_t)&dest[0] + ft_min(n , length) >= (uintptr_t)&src[0]))
+    {
+        (uintptr_t)&dest[0] -= (uintptr_t)&dest[0] + ft_min(n, length) - (uintptr_t)&src[0]  + 1;
+    }
 }

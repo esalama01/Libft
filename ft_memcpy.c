@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 13:15:58 by elsalama          #+#    #+#             */
-/*   Updated: 2026/10/14 20:54:50 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/10/15 16:07:14 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,12 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 	size_t i;
 
 	i = 0;
-	char *srcc = (char *)src;
-	char *destt = (char*)dest;
-	while(srcc[i] && i < n)
+	while((char)src[i] && i < n)
 	{
-		destt[i] = srcc[i];
+		(char)dest[i] = (char)src[i];
 		i++;
 	}
-	return destt;
+	return dest;
 }
 
 #include<stdio.h>
