@@ -11,7 +11,7 @@ int	is_lower(char c)
 		return (1);
 	return (0);
 }
-int	is_alpha(int c)
+int	ft_is_alpha(int c)
 {
 	if (is_upper(c) || is_lower(c))
 		return (1);
