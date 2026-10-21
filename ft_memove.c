@@ -34,20 +34,54 @@ void *ft_memmove(void *dest, const void *src, size_t n)//i will use either forwa
 {
     /*
     I must handle two cases:
-        1- [&src[0] > dest[0]] && [&dest[0] + min(n, len(src)) > &src[0]]
-        2- &src[0] <= &dest[0] <= src[len(src) - 1]
+        1-  if d < s
+        2-  if d > s && d < s[n-1]
+        3-  if d > s 
     */
     /*
     for :
-        case 1- backward &dest[0] by a quantity of [&dest[0] + min(n, len(src)) -src[0] + 1])
-        case 2- forward (&dest[0]  by a quatity of [src[len(src) - 1] + 1]) 
+        1 - copy reversely
+        2 - move d to a free block of memory.
+        3 - khdem 3aadi
     */
-    int length;
 
-    length = ft_strlen(src);
-    ///case 1
-    if (((uintptr_t)&src[0] > (uintptr_t)&dest[0]) && ((uintptr_t)&dest[0] + ft_min(n , length) >= (uintptr_t)&src[0]))
+    int length;
+    int l;
+    int i;
+
+    i = 0;
+    l = ft_strlen((char *)src);
+    length = ft_min(l, n);
+    unsigned char *s = (unsigned char *) src;
+    unsigned char *d = (unsigned char *) dest;
+
+    if (d < s)
     {
-        (uintptr_t)&dest[0] -= (uintptr_t)&dest[0] + ft_min(n, length) - (uintptr_t)&src[0]  + 1;
+        while(length-- > 0)
+        {
+            d[length] = s[length];
+        }
     }
+    if (d >= s && d < (s + l))
+    {
+        while (d < (s + l))
+        {
+            d++;
+        }
+    }
+    while(i < length)
+    {
+        d[i] = s[i];
+        i++;
+    }
+    return d;
+}
+
+#include<stdio.h>
+int main()
+{
+    char str[13] = "mehdiiii";
+	ft_memmove(str + 7, str, 4);
+	printf("%s\n", str);
+	return 0;
 }
