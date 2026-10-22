@@ -13,4 +13,5 @@ int ft_isalnum(int c);
 int ft_isalnum(int c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 void *ft_memchr(const void *s, int c, size_t n);
+int ft_isprint(int c);
 #endif
