@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 16:32:52 by elsalama          #+#    #+#             */
-/*   Updated: 2026/10/22 16:42:29 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/10/22 16:43:02 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void *ft_memchr(const void *s, int c, size_t n)//scans the initial n bytes of th
 	while(ss[i] && i < n)
 	{
 		if (ss[i] ==  c)
-			return (&ss[i]);
+			return (&s[i]);
 		i++;
 	}
 	return (NULL);
