@@ -10,4 +10,5 @@ void *ft_memcpy(void *dest, const void *src, size_t n);
 int	ft_isdigit(int c);
 int	ft_is_alpha(int c);
 int ft_isalnum(int c);
+int ft_isalnum(int c)
 #endif
