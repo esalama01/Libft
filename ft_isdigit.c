@@ -6,13 +6,13 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 11:16:18 by elsalama          #+#    #+#             */
-/*   Updated: 2026/10/14 11:16:24 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/10/22 15:26:36 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-int	ft_digit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '0')
 		return (1);
