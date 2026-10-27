@@ -19,4 +19,5 @@ int ft_memcmp(const void *s1, const void *s2, size_t n);
 int ft_tolower(int c);
 int	is_lower(char c);
 int	is_upper(char c);
+char *ft_strnstr(const char *big, const char *little, size_t len);
 #endif
