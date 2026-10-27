@@ -21,4 +21,5 @@ int	is_lower(char c);
 int	is_upper(char c);
 char *ft_strnstr(const char *big, const char *little, size_t len);
 void ft_bzero(void *s, size_t n);
+char *ft_strchr(const char *s, int c);
 #endif
