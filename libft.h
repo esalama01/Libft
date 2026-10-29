@@ -27,5 +27,6 @@ void ft_bzero(void *s, size_t n);
 char *ft_strchr(const char *s, int c);
 int ft_atoi(const char *nptr);
 void *ft_calloc(size_t nmemb, size_t size);
+char *ft_strdup(const char *s);
 
 #endif
