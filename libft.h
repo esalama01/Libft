@@ -2,6 +2,9 @@
 #define LIBFT
 
 #include<stddef.h>
+#include<stddef.h>
+#include<stdlib.h>
+#include<stdint.h>
 
 char *ft_strrchr(const char *s, int c);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -23,4 +26,6 @@ char *ft_strnstr(const char *big, const char *little, size_t len);
 void ft_bzero(void *s, size_t n);
 char *ft_strchr(const char *s, int c);
 int ft_atoi(const char *nptr);
+void *ft_calloc(size_t nmemb, size_t size);
+
 #endif
