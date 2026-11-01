@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 16:06:05 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/01 16:30:10 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/01 18:53:52 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void ft_lstadd_front(t_list **lst, t_list *new)
         return ;
     new->next = *(lst); 
 }
-/*
 int main()
 {
     t_list  *listt;
@@ -32,9 +31,8 @@ int main()
     t_list *head = listt2;
     while (head -> next != NULL)
     {
-        printf("%s\n", (char *)head->content);
+        printf("%hhn\n", ((unsigned char *)head->content));
         head = head->next;
     }
     return (0);
 }
-*/
