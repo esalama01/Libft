@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 07:33:28 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/02 07:52:26 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/02 13:10:51 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void ft_lstclear(t_list **lst, void (*del)(void *))
     {
 	printf("ll\n");
 	printf("%s\n", (char *)(*lst)->content);
-        ft_lstdelone(*lst, del);
+    ft_lstdelone(*lst, del);
 	printf("%s\n", (char *)(*lst)->content);
         lst++;
     }
