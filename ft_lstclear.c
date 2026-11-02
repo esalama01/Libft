@@ -14,18 +14,18 @@
 
 void ft_lstclear(t_list **lst, void (*del)(void *))
 {
-    t_list  *head;
-
-    head = *lst;
-    while (head->next != NULL)
+    while ((*lst)->next != NULL)
     {
-        ft_lstdelone(head, del);
-        head = head->next;
+	printf("ll\n");
+	printf("%s\n", (char *)(*lst)->content);
+        ft_lstdelone(*lst, del);
+	printf("%s\n", (char *)(*lst)->content);
+        lst++;
     }
-    ft_lstdelone(head, del);
+    ft_lstdelone(*lst, del);
     lst = NULL;
 }
- 
+
 void    del(void *content)
 {
     free(content);
@@ -36,7 +36,7 @@ int main()
     t_list *node2;
     t_list *node3;
     t_list *node4;
-    t_list  *head;
+    //t_list  *head;
     t_list *node5 = ft_lstnew(ft_strdup("s5"));
     node1 = ft_lstnew(ft_strdup("s1"));
     node2 = ft_lstnew(ft_strdup("s2"));
@@ -46,14 +46,14 @@ int main()
     ft_lstadd_front(&node3, node2);
     ft_lstadd_front(&node2, node1);
     ft_lstadd_back(&node1, node5);
-    head = node1;
-    printf("---%d---\n", ft_lstsize(node1));
-    while(head->next != NULL)
+    //head = node1;
+    //printf("---%d---\n", ft_lstsize(node1));
+    /*while(head->next != NULL)
     {
         printf("%s\n", (char *)head->content);
         head = head -> next;
-    }
-    printf("%s\n", (char *)head->content);
+    }*/
+    //printf("%s\n", (char *)head->content);
     ft_lstclear(&node1, del);
     return (0);
 }
