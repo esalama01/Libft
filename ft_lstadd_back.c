@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 20:28:42 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/02 07:08:15 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/02 07:39:13 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
     }
     ft_lstadd_front(&new, head);
 }
-
+/*
 int main()
 {
     t_list *node1;
@@ -57,3 +57,4 @@ int main()
     printf("%d\n", *(int *)head->content);
     return (0);
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 07:09:01 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/02 07:31:46 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/02 07:43:58 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	del(lst -> content);
     free(lst);
 }
+/*
 void    del(void *content)
 {
     free(content);
 }
+
 int main()
 {
     t_list *node1;
@@ -33,3 +35,4 @@ int main()
     //printf("%s\n", (char *)node1->content);
     return (0);
 }
+*/
