@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 11:50:28 by elsalama          #+#    #+#             */
-/*   Updated: 2026/10/31 12:30:53 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/01 21:07:34 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	*ft_itoa(int nb)
 
 int	main(void)
 {
-	int l = calc_size(-2147483648);
-	printf("%d\n%s\n", l, ft_itoa(-2147483648));
+	int l = calc_size(0123);
+	printf("%d\n%s\n", l, ft_itoa(0b101));
 	return (0);
 }
