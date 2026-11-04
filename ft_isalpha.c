@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 13:39:31 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 14:37:24 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/04 14:46:46 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_is_lower(int c)
 		return (1);
 	return (0);
 }
-int	ft_is_alpha(int c)
+int	ft_isalpha(int c)
 {
 	if (ft_is_upper(c) || ft_is_lower(c))
 		return (1);
