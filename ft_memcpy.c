@@ -6,11 +6,11 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 13:15:58 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 13:41:47 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/04 14:12:14 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

@@ -6,17 +6,19 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 13:39:31 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 13:39:33 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/04 14:37:24 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	is_upper(char c)
+#include "libft.h"
+
+int	ft_is_upper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (1);
 	return (0);
 }
-int	is_lower(char c)
+int	ft_is_lower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (1);
@@ -24,7 +26,7 @@ int	is_lower(char c)
 }
 int	ft_is_alpha(int c)
 {
-	if (is_upper(c) || is_lower(c))
+	if (ft_is_upper(c) || ft_is_lower(c))
 		return (1);
 	return (0);
 }

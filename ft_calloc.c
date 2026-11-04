@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 09:56:57 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 13:39:12 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/04 14:23:34 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,9 @@ void	ft_bzero(void *s, size_t n)
 }
 
 void	*ft_calloc(size_t nmemb, size_t size)
-		// allocates mem for an array of nmemb bytes where each has a size bytes
 {
-	size_t total;
-	void *ptr;
+	size_t	total;
+	void	*ptr;
 
 	if (nmemb == 0 || size == 0)
 	{

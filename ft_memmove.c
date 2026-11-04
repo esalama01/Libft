@@ -6,21 +6,11 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 20:53:25 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 13:42:34 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/04 14:12:54 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-int	ft_strlen(char *s)
-{
-	int	l;
-
-	l = 0;
-	while (s[l])
-		l++;
-	return (l);
-}
+#include "libft.h"
 
 int	ft_min(int a, int b)
 {
@@ -32,7 +22,7 @@ int	ft_min(int a, int b)
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	int				length;
-	int				l;
+	size_t			l;
 	int				i;
 	unsigned char	*s;
 	unsigned char	*d;
