@@ -6,11 +6,11 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 16:44:32 by elsalama          #+#    #+#             */
-/*   Updated: 2026/10/22 16:48:04 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/04 13:39:50 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 127)
 		return (1);

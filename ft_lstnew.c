@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 11:38:20 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/02 07:27:20 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/04 13:40:57 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*new;
+	t_list *new;
 
 	new = malloc(sizeof(t_list));
 	if (!new)
@@ -23,12 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
-/*
-int	main(void)
-{
-	t_list *neww;
-	neww = ft_lstnew("salam");
-	printf("%s\n", (char *)neww->content);
-	return (0);
-}
-*/

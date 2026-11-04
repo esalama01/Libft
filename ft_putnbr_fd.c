@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 16:47:08 by elsalama          #+#    #+#             */
-/*   Updated: 2026/10/31 17:06:12 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/04 13:44:31 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void	ft_putnbr_fd(int nb, int fd)
 	if (n >= '0' && n <= '9')
 		ft_putchar_fd(n + '0', fd);
 	else
-    {
-        ft_putnbr_fd(n / 10, fd);
-        ft_putnbr_fd(n % 10, fd);
-    }
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
 }

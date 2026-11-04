@@ -6,19 +6,19 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 16:49:23 by elsalama          #+#    #+#             */
-/*   Updated: 2026/10/22 17:02:13 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/04 13:45:48 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
+#include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)//size means the size of the total string it wants to create
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	d_len;
 	size_t	s_len;
 
-	if (!src || !dst) //for strlcat() both src and dst must be NUL-terminated
+	if (!src || !dst)
 		return (NULL);
 	i = 0;
 	d_len = ft_strlen(dst);
@@ -27,7 +27,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)//size means the size 
 	{
 		return (s_len + size);
 	}
-	while(src[i] && i < size - d_len - 1)
+	while (src[i] && i < size - d_len - 1)
 	{
 		dst[d_len + i] = src[i];
 		i++;

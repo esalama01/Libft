@@ -6,11 +6,9 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 11:16:18 by elsalama          #+#    #+#             */
-/*   Updated: 2026/10/26 10:41:12 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/04 13:39:46 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include<unistd.h>
 
 int	ft_isdigit(int c)
 {

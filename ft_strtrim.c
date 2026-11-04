@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:05:43 by elsalama          #+#    #+#             */
-/*   Updated: 2026/10/30 17:02:14 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/04 13:48:20 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,12 @@ size_t	ft_locate_end(char const *s1, char const *set)
 	return (i);
 }
 
-
 void	ft_fill(char const *s1, char *str, size_t beg, size_t end)
 {
 	size_t	i;
 
 	i = 0;
-	while (beg <= end) // could be <= m not sure
+	while (beg <= end)
 	{
 		str[i] = s1[beg];
 		i++;
@@ -67,9 +66,9 @@ void	ft_fill(char const *s1, char *str, size_t beg, size_t end)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	j;
-	char	*str;
+	size_t i;
+	size_t j;
+	char *str;
 
 	if (!s1 || !set || ft_strlen(set) > ft_strlen(s1))
 		return (NULL);
@@ -80,13 +79,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	ft_fill(s1, str, i, j);
 	return (str);
-}
-
-int	main(void)
-{
-	char *ss = "holamehdiholah";
-	char *end = ft_strtrim(ss, "ha");
-	printf("%s\n", end);
-	free(end);
-	return (0);
 }

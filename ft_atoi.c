@@ -6,10 +6,9 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 16:11:46 by elsalama          #+#    #+#             */
-/*   Updated: 2026/10/27 16:13:32 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/04 13:38:45 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 int	is_space(char c)
 {
@@ -20,9 +19,9 @@ int	is_space(char c)
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	result;
-	int	sign;
+	int i;
+	int result;
+	int sign;
 
 	i = 0;
 	sign = 1;
