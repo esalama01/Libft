@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 20:23:11 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 13:41:05 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/06 16:44:40 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 unsigned int	ft_lstsize(t_list *lst)
 {
-	unsigned int i;
-	t_list *head;
+	t_list			*head;
+	unsigned int	i;
 
 	if (!lst)
 		return (0);
 	i = 0;
 	head = lst;
-	while (head->next != NULL)
+	while (head != NULL)
 	{
 		i++;
 		head = head->next;
