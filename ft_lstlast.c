@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 20:26:29 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 14:11:24 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/06 15:43:01 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list *head;
+	t_list	*head;
 
 	if (!lst)
 		return (NULL);
