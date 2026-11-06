@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 20:28:42 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 14:22:07 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/04 15:53:03 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	{
 		head = head->next;
 	}
-	ft_lstadd_front(&new, head);
+	head->next = new;
 }

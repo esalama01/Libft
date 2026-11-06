@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 09:56:57 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 14:23:34 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/04 16:36:39 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_bzero(void *s, size_t n)
 	if (!ss || !n)
 		return ;
 	i = 0;
-	while (ss[i] && i < n)
+	while (i < n)
 	{
 		ss[i] = '\0';
 		i++;
@@ -46,6 +46,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ptr = malloc(total);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, nmemb);
+	ft_bzero(ptr, total);
 	return (ptr);
 }
