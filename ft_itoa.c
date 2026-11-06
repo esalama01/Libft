@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 11:50:28 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 14:21:58 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/06 13:26:11 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,18 @@ int	calc_size(long n)
 	return (size);
 }
 
+char	*zero_handler(void)
+{
+	char	*str;
+
+	str = malloc(2);
+	if (!str)
+		return (NULL);
+	str[0] = '0';
+	str[1] = '\0';
+	return (str);
+}
+
 char	*ft_itoa(int nb)
 {
 	long	n;
@@ -38,6 +50,8 @@ char	*ft_itoa(int nb)
 	char	*str;
 
 	n = nb;
+	if (n == 0)
+		return (zero_handler());
 	size = calc_size(n);
 	str = malloc(size + 1);
 	if (!str)
