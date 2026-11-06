@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 16:47:08 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 13:44:31 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/06 17:54:13 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int nb, int fd)
 {
-	long n;
+	long	n;
 
 	n = nb;
 	if (n < 0)
@@ -22,7 +22,7 @@ void	ft_putnbr_fd(int nb, int fd)
 		ft_putchar_fd('-', fd);
 		n *= -1;
 	}
-	if (n >= '0' && n <= '9')
+	if (n >= 0 && n <= 9)
 		ft_putchar_fd(n + '0', fd);
 	else
 	{
