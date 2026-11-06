@@ -6,27 +6,11 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 09:56:57 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 16:36:39 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/06 12:53:22 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_bzero(void *s, size_t n)
-{
-	unsigned char	*ss;
-	size_t			i;
-
-	ss = s;
-	if (!ss || !n)
-		return ;
-	i = 0;
-	while (i < n)
-	{
-		ss[i] = '\0';
-		i++;
-	}
-}
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -35,7 +19,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if (nmemb == 0 || size == 0)
 	{
-		ptr = malloc(1);
+		ptr = malloc(0);
 		return (ptr);
 	}
 	if (nmemb > SIZE_MAX / size)
