@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 16:40:11 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 13:44:35 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/06 17:51:36 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{
