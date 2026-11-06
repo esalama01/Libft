@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 16:37:41 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 13:44:13 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/06 17:50:31 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, c, 1);
+	write(fd, &c, 1);
 }
