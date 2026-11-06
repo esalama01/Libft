@@ -6,11 +6,10 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 13:39:31 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/06 13:23:44 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/06 18:01:52 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 
 static int	ft_is_upper(int c)
 {

@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 15:04:15 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 13:45:13 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/06 17:59:41 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t i;
-	size_t l;
-	char *cpy;
+	size_t	i;
+	size_t	l;
+	char	*cpy;
 
 	if (!s)
 	{

@@ -6,11 +6,9 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 16:44:32 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 14:14:22 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/06 18:02:09 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {
