@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 11:43:06 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 13:45:24 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/07 10:39:46 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t i;
-	size_t j;
-	char *final;
+	size_t	i;
+	size_t	j;
+	char	*final;
 
 	if (!s1 || !s2)
 		return (NULL);
@@ -27,17 +27,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	while (s1[i])
 	{
-		final[j] = s1[i];
+		final[i] = s1[i];
 		i++;
-		j++;
 	}
-	i = 0;
-	while (s2[i])
+	while (s2[j])
 	{
-		final[j] = s2[i];
+		final[i] = s2[j];
 		i++;
 		j++;
 	}
-	final[j] = '\0';
+	final[i] = '\0';
 	return (final);
 }
