@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:05:43 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 13:48:20 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/07 15:20:26 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,14 +66,22 @@ void	ft_fill(char const *s1, char *str, size_t beg, size_t end)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t i;
-	size_t j;
-	char *str;
+	size_t	i;
+	size_t	j;
+	char	*str;
 
-	if (!s1 || !set || ft_strlen(set) > ft_strlen(s1))
+	if (!s1 || !set)
 		return (NULL);
 	i = ft_locate_begg(s1, set);
 	j = ft_locate_end(s1, set);
+	if (s1[i] == '\0')
+	{
+		str = malloc(1);
+		if (!str)
+			return (NULL);
+		str[0] = '\0';
+		return (str);
+	}
 	str = malloc(j - i + 1);
 	if (!str)
 		return (NULL);
