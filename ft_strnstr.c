@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 14:31:11 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/04 13:47:24 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/07 15:05:37 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (!big && len == 0)
 		return (NULL);
-	if (!little)
-		return ((char *)&big[0]);
+	if (little[0] == '\0')
+		return ((char *)big);
 	while (big[i] && i < len)
 	{
 		j = 0;
