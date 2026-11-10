@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 16:11:46 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/10 12:27:43 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/10 15:16:28 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 static	int	check_max(long res, int sign, char c)
 {
-	if (res + (c - '0') > LONG_MAX / 10)
+	if ((res + (c - '0') > LONG_MAX / 10) && sign == 1)
 	{
-		if (sign == -1)
-		{
-			return (0);
-		}
 		return (-1);
+	}
+	if ((res + (c - '0') > LONG_MIN / 10) && sign == -1)
+	{
+		return (0);
 	}
 	return (1);
 }
