@@ -6,40 +6,18 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 17:03:02 by elsalama          #+#    #+#             */
-/*   Updated: 2026/10/31 11:46:24 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/10 15:02:51 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	calculate_size(char const *s, char c)
+static void	ft_free(char **arr, int k)
 {
 	int	i;
-	int	l;
-	int	count;
 
 	i = 0;
-	count = 0;
-	while (s[i] && s[i] == c)
-		i++;
-	l = ft_strlen(s) - 1;
-	while (l > 0 && (s[l] == c))
-		l--;
-	while (s[i] && i <= l)
-	{
-		if (s[i] == c)
-			count++;
-		i++;
-	}
-	return (count);
-}
-
-void ft_free_kolchi(char	**arr, size_t	limit)
-{
-	size_t	i;
-
-	i = 0;
-	while(i < limit)
+	while (i < k)
 	{
 		free(arr[i]);
 		i++;
@@ -47,87 +25,86 @@ void ft_free_kolchi(char	**arr, size_t	limit)
 	free(arr);
 }
 
-char	*fill_word(char const *s, size_t start_index, size_t end_index)
+static int	calc_size(char const *str, char c)
 {
-	size_t	i;
-	char	*arr;
+	int	i;
+	int	count;
 
 	i = 0;
-	arr = malloc(end_index - start_index + 1);
-	if (!arr)
-		return (NULL);
-	while (start_index <= end_index)
+	count = 0;
+	if (str[0] == '\0')
+		return (0);
+	while (str[i])
 	{
-		arr[i] = s[start_index];
-		start_index++;
-		i++;
-	}
-	arr[i] = '\0';
-	return (arr);
-}
-
-void	ft_fill_array(char **arr, char const *s, char c)
-{
-	size_t	i;
-	size_t	l;
-	size_t	it;
-	size_t	start_index;
-	char	*w_arr;
-
-	i = 0;
-	it = 0;
-	l = ft_strlen(s) - 1;
-	while (s[i] && s[i] == c)
-		i++;
-	while (l > 0 && (s[l] == c))
-			l--;
-	start_index = i;
-	while (s[i] && i <= l)
-	{
-		while (s[i] == c)
+		while (str[i] == c)
 			i++;
-		if (s[i - 1] != c && s[i] == c)
+		if (str[i])
 		{
-			w_arr = fill_word(s, start_index, i - 1);
-			if (!w_arr)
-			{
-				ft_free_kolchi(arr, it);
-			}
-			arr[it] = w_arr;
-			it++;
-			start_index = i + 1;
+			count++;
+			while (str[i] && str[i] != c)
+				i++;
 		}
-		i++;
 	}
-	arr[it] = NULL;
+	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static int	allocation_size(char const *str, char c)
 {
-	size_t size;
-	char **arr;
+	int	j;
 
-	if (!s)
-		return (NULL);
-	size = calculate_size(s, c);
-	arr = malloc((size + 1)* sizeof(char *));
-	if (!arr)
+	j = 0;
+	while (str[j] && str[j] != c)
+		j++;
+	return (j);
+}
+
+static char	**fill_array(char **arr, const char *str, char c, int k)
+{
+	int	j;
+
+	while (*str)
 	{
-		ft_free_kolchi(arr, size + 1);
+		while (*str == c)
+			str++;
+		if (!*str)
+			break ;
+		j = 0;
+		arr[k] = malloc(allocation_size(str, c) + 1);
+		if (!arr[k])
+		{
+			ft_free(arr, k);
+			return (NULL);
+		}
+		while (*str && *str != c)
+		{
+			arr[k][j++] = *str;
+			str++;
+		}
+		arr[k][j] = '\0';
+		k++;
 	}
-	ft_fill_array(arr, s, c);
+	arr[k] = NULL;
 	return (arr);
 }
-int main()
+
+char	**ft_split(const char	*str, char c)
 {
-	char *s = "mehdimklidjmkl";
-	char **arr =ft_split(s, 'm');
-	int i = 0;
-	while(i < 3)
+	int		size;
+	char	**arr;
+
+	if (!str)
+		return (NULL);
+	size = calc_size(str, c);
+	arr = malloc((size + 1) * sizeof(char *));
+	if (!arr)
+		return (NULL);
+	if (str[0] == '\0')
 	{
-		printf("%s\n",arr[i]);
-		i++;
+		arr[0] = NULL;
+		return (arr);
 	}
-	ft_free_kolchi(arr, 3);
-	return (0);
+	arr = fill_array(arr, str, c, 0);
+	if (!arr)
+		return (NULL);
+	return (arr);
 }
