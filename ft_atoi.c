@@ -6,13 +6,26 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 16:11:46 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/09 17:29:58 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/10 12:25:13 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_space(char c)
+static	int	check_max(long res, int sign, char c)
+{
+	if (res + (c - '0') > LONG_MAX / 10)
+	{
+		if (sign == -1)
+		{
+			return (0);
+		}
+		return (-1);
+	}
+	return (1);
+}
+
+static int	ft_is_space(char c)
 {
 	if ((c >= 9 && c <= 13) || c == 32)
 		return (1);
@@ -21,14 +34,14 @@ int	is_space(char c)
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	result;
-	int	sign;
+	int		i;
+	int		sign;
+	long	result;
 
 	i = 0;
 	sign = 1;
 	result = 0;
-	while (is_space(str[i]))
+	while (ft_is_space(str[i]))
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
@@ -38,6 +51,8 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
+		if (check_max(result, sign, str[i]) != 1)
+			return (check_max(result, sign, str[i]));
 		result *= 10;
 		result += str[i] - '0';
 		i++;
