@@ -6,13 +6,13 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:05:43 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/07 15:20:26 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/10 12:50:12 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_ispresent(char const *set, char c)
+static int	ft_ispresent(char const *set, char c)
 {
 	size_t	i;
 
@@ -26,7 +26,7 @@ int	ft_ispresent(char const *set, char c)
 	return (0);
 }
 
-size_t	ft_locate_begg(char const *s1, char const *set)
+static size_t	ft_locate_begg(char const *s1, char const *set)
 {
 	size_t	i;
 
@@ -38,7 +38,7 @@ size_t	ft_locate_begg(char const *s1, char const *set)
 	return (i);
 }
 
-size_t	ft_locate_end(char const *s1, char const *set)
+static size_t	ft_locate_end(char const *s1, char const *set)
 {
 	size_t	i;
 
@@ -50,7 +50,7 @@ size_t	ft_locate_end(char const *s1, char const *set)
 	return (i);
 }
 
-void	ft_fill(char const *s1, char *str, size_t beg, size_t end)
+static void	ft_fill(char const *s1, char *str, size_t beg, size_t end)
 {
 	size_t	i;
 

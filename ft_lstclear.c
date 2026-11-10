@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 07:33:28 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/06 15:24:53 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/10 12:33:29 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*memory_node;
 	t_list	*iterator_node;
 
-	if (!lst || !(*lst))
+	if (!lst || !(*lst) || !del)
 		return ;
 	iterator_node = *lst;
 	while (iterator_node != NULL)

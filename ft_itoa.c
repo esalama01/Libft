@@ -6,13 +6,13 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 11:50:28 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/06 13:26:11 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/10 12:32:18 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	calc_size(long n)
+static int	calc_size(long n)
 {
 	int	size;
 
@@ -30,7 +30,7 @@ int	calc_size(long n)
 	return (size);
 }
 
-char	*zero_handler(void)
+static char	*zero_handler(void)
 {
 	char	*str;
 
