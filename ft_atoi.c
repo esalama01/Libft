@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 16:11:46 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/11 16:28:51 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/11 16:34:41 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int	ft_atoi(const char *str)
 {
 	int		i;
 	int		sign;
-	int		l;
 	long	result;
 
 	i = 0;
