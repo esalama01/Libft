@@ -153,3 +153,23 @@ int	main(void)
 	return (0);
 }
 ```
+ 
+---
+ 
+## Resources
+ 
+### Classic references
+ 
+- Linux man pages (`man 3 <function>`): the specification for the reimplemented libc functions.
+- *The C Programming Language*, Kernighan & Ritchie: pointers, memory, and data structures.
+- [GNU Make Manual](https://www.gnu.org/software/make/manual/): pattern rules, automatic variables, and avoiding relinking.
+- [Tripouille/libftTester](https://github.com/Tripouille/libftTester) and Valgrind: used to test behavior and check for leaks and invalid memory accesses.
+### Use of AI
+ 
+AI was used as a learning and review aid, not as a code generator:
+ 
+- **Edge-case review:** all functions were written by me first; AI was then used for conceptual hints about edge cases (for example NULL handling, empty or single-node lists in `ft_lstclear`, cleanup on allocation failure in `ft_lstmap`, and allocation sizes in `ft_strtrim`).
+- **Build system and header review:** checking `libft.h` and the `Makefile` for missing prototypes and relinking issues.
+- **Documentation:** structuring and formatting this README.
+No AI-generated code was copied into the project.
+ 
