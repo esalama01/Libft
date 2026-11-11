@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 13:15:58 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/06 17:21:01 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/11 15:49:23 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*ss;
 	unsigned char	*dd;
 
-	*ss = (unsigned char *)src;
-	*dd = (unsigned char *)dest;
+	ss = (unsigned char *)src;
+	dd = (unsigned char *)dest;
 	i = 0;
 	while (i < n)
 	{

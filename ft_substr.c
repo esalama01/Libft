@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 10:42:09 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/07 15:42:27 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/11 15:50:15 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ static char	*ft_fill(char const *s, unsigned int start, size_t len)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	j;
 	char	*sub;
 
 	if (!s)
