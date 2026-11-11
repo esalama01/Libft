@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 14:38:03 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/11 15:48:56 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/11 16:30:40 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
-# include <limits.h>
 
 typedef struct s_list
 {
