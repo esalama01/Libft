@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:05:43 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/10 12:50:12 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/11 16:12:53 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		str[0] = '\0';
 		return (str);
 	}
-	str = malloc(j - i + 1);
+	str = malloc(j - i + 2);
 	if (!str)
 		return (NULL);
 	ft_fill(s1, str, i, j);

@@ -6,24 +6,11 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 16:11:46 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/10 15:16:28 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/11 16:28:51 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static	int	check_max(long res, int sign, char c)
-{
-	if ((res + (c - '0') > LONG_MAX / 10) && sign == 1)
-	{
-		return (-1);
-	}
-	if ((res + (c - '0') > LONG_MIN / 10) && sign == -1)
-	{
-		return (0);
-	}
-	return (1);
-}
 
 static int	ft_is_space(char c)
 {
@@ -52,9 +39,6 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		l = check_max(result, sign, str[i]);
-		if (l != 1)
-			return (l);
 		result = result * 10 + str[i] - '0';
 		i++;
 	}

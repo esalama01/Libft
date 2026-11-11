@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 10:42:09 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/11 15:50:15 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/11 16:14:16 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start > ft_strlen(s))
 	{
-		return (NULL);
+		return (ft_strdup(""));
 	}
 	if (len > ft_strlen(s) - start)
 	{
