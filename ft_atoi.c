@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 16:11:46 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/11 16:34:41 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/11 17:21:33 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ static int	ft_is_space(char c)
 
 int	ft_atoi(const char *str)
 {
-	int		i;
-	int		sign;
-	long	result;
+	int	i;
+	int	sign;
+	int	result;
 
 	i = 0;
 	sign = 1;

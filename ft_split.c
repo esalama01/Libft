@@ -6,7 +6,7 @@
 /*   By: elsalama <elsalama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 17:03:02 by elsalama          #+#    #+#             */
-/*   Updated: 2026/11/10 15:02:51 by elsalama         ###   ########.fr       */
+/*   Updated: 2026/11/11 17:34:58 by elsalama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ static char	**fill_array(char **arr, const char *str, char c, int k)
 	return (arr);
 }
 
-char	**ft_split(const char	*str, char c)
+char	**ft_split(const char *str, char c)
 {
 	int		size;
 	char	**arr;
